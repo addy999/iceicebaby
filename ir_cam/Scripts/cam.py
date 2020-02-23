@@ -15,4 +15,7 @@ print("Camera initalized boo")
 def get_temps():
     capture = [0] * 768
     mlx.getFrame(capture)
-    return np.array([capture[row*24:row*24+32] for row in range(24)])
+    capture = np.array(capture)
+
+    return np.reshape(capture, (24, 32))
+    # return np.array([capture[row*24:row*24+32] for row in range(24)])
