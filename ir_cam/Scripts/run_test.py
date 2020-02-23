@@ -7,10 +7,8 @@ results_dir = "/home/pi/iceicebaby/ir_cam/Results/"
 
 def save(array, rock_id, ice_ratio, seconds_elapsed):
     dir_to_save = results_dir+str(rock_id)
-
     if not os.path.isdir(dir_to_save):
         os.mkdir(dir_to_save)
-    
     np.save(dir_to_save + "/" + str(ice_ratio) + "_" + str(seconds_elapsed), array)
 
 # Test Save
