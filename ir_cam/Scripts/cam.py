@@ -12,7 +12,7 @@ print("Camera initalized boo")
  
 def get_temps(exposures=3):
     all_captures = []
-    for i in exposures:
+    for i in range(exposures):
         capture = [0] * 768 # 768 pixels
         mlx.getFrame(capture)
         all_captures.append(np.array(capture))     
